@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#07080c">
+  <title>Taller Motos AIPAR</title>
+  <meta name="description" content="Especialistas en motos de circuito. Llevamos nuestra experiencia racing a tu moto de calle: mantenimiento, mecánica y puesta a punto.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:ital,wght@0,600;0,800;1,800&family=Saira:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== Navegación ===== -->
+  <header class="nav" data-nav>
+    <a href="#inicio" class="brand" aria-label="Taller Motos AIPAR, inicio">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text"><small>Taller Motos</small>AIPAR</span>
+    </a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#precios">Precios</a>
+      <a href="#racing">Racing</a>
+      <a href="#faq">Preguntas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a href="#contacto" class="btn btn-primary nav-cta">Pide cita</a>
+    <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer" data-menu-open>
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Menú móvil -->
+  <div class="drawer-backdrop" data-drawer-backdrop hidden></div>
+  <aside class="drawer" id="drawer" aria-label="Menú" data-drawer hidden>
+    <a href="#servicios">Servicios</a>
+    <a href="#precios">Precios</a>
+    <a href="#racing">Racing</a>
+    <a href="#faq">Preguntas frecuentes</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#contacto" class="btn btn-primary">Pide cita</a>
+  </aside>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="inicio">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="glow glow-red"></div>
+        <div class="glow glow-blue"></div>
+        <div class="checker"></div>
+      </div>
+      <div class="hero-inner">
+        <p class="eyebrow hero-item">🏁 Especialistas en motos de circuito</p>
+        <h1 class="hero-title hero-item">
+          Experiencia de circuito<br><span class="neon-red">para tu moto</span> <span class="neon-blue">de calle</span>
+        </h1>
+        <p class="hero-lead hero-item">
+          Mantenimiento, mecánica y puesta a punto con el mismo cuidado que ponemos en una moto de carreras.
+        </p>
+        <div class="hero-actions hero-item">
+          <a href="#contacto" class="btn btn-primary btn-lg">Pide tu cita</a>
+          <a href="#servicios" class="btn btn-ghost btn-lg">Ver servicios</a>
+        </div>
+        <ul class="hero-stats hero-item" aria-label="Lo que nos define">
+          <li><strong>Racing</strong><span>Experiencia en pista</span></li>
+          <li><strong>Calle</strong><span>Scooter, naked, sport, enduro</span></li>
+          <li><strong>Escáner</strong><span>Diagnóstico electrónico</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Servicios ===== -->
+    <section class="section" id="servicios">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Nuestros servicios</p>
+          <h2>Todo lo que tu moto necesita, en un solo taller</h2>
+        </header>
+
+        <div class="services">
+          <article class="service reveal">
+            <div class="service-icon red" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 15h11l4-4h3v2l-3 3H3z"/><path d="M8 15V9h4l2 2"/><path d="M19 19a1.5 1.5 0 1 1-3 0c0-1 1.5-3 1.5-3s1.5 2 1.5 3z"/></svg>
+            </div>
+            <h3>Cambio de aceite</h3>
+            <p>Aceite y filtros adecuados a tu motor, con revisión de niveles incluida.</p>
+          </article>
+          <article class="service reveal">
+            <div class="service-icon blue" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 4v5M12 15v5M4 12h5M15 12h5"/></svg>
+            </div>
+            <h3>Suspensión y frenos</h3>
+            <p>Pastillas, discos, líquido y reglaje de suspensión para frenar y trazar con confianza.</p>
+          </article>
+          <article class="service reveal">
+            <div class="service-icon blue" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="9" rx="1"/><path d="M12 12v5"/><circle cx="12" cy="19" r="2"/><path d="M7 6h10M7 9h10"/></svg>
+            </div>
+            <h3>Mecánica en general</h3>
+            <p>Desde una avería puntual hasta una revisión completa. Si tiene motor, la miramos.</p>
+          </article>
+          <article class="service reveal">
+            <div class="service-icon red" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="2"/><rect x="8.5" y="6" width="7" height="4" rx="1"/><path d="M13 12l-2 3h2l-2 3"/></svg>
+            </div>
+            <h3>Sistema eléctrico</h3>
+            <p>Batería, carga, luces, cableado y centralitas. Encontramos el fallo, no lo adivinamos.</p>
+          </article>
+        </div>
+
+        <ul class="chips reveal" aria-label="Más servicios">
+          <li>Mantenimiento preventivo</li>
+          <li>Reparación de motores</li>
+          <li>Neumáticos y llantas</li>
+          <li>Transmisiones</li>
+          <li>Diagnóstico y escaneo</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Marcas ===== -->
+    <section class="brands" id="marcas" aria-labelledby="marcas-title">
+      <div class="container">
+        <p class="brands-title reveal" id="marcas-title">Trabajamos con todas las marcas</p>
+        <!-- EDITAR: añade o quita marcas según lo que trabajéis -->
+        <ul class="brand-list reveal">
+          <li>Honda</li>
+          <li>Yamaha</li>
+          <li>Kawasaki</li>
+          <li>Suzuki</li>
+          <li>KTM</li>
+          <li>Gas Gas</li>
+          <li>Husqvarna</li>
+          <li>Ducati</li>
+          <li>BMW</li>
+          <li>Aprilia</li>
+          <li>Triumph</li>
+          <li>Piaggio</li>
+          <li>Kymco</li>
+          <li>SYM</li>
+        </ul>
+        <p class="brands-note reveal">Scooter, naked, sport, trail, enduro y motos de circuito.</p>
+      </div>
+    </section>
+
+    <!-- ===== Precios ===== -->
+    <section class="section" id="precios">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Precios orientativos</p>
+          <h2>Sabes lo que pagas antes de empezar</h2>
+        </header>
+
+        <!-- EDITAR: ajusta los importes a vuestras tarifas reales -->
+        <ul class="prices">
+          <li class="price reveal">
+            <div><h3>Cambio de aceite y filtro</h3><p>Aceite según especificación del fabricante.</p></div>
+            <span class="price-tag"><small>desde</small>45 €</span>
+          </li>
+          <li class="price reveal">
+            <div><h3>Mantenimiento básico</h3><p>Aceite, filtro, revisión de frenos, cadena, luces y niveles.</p></div>
+            <span class="price-tag"><small>desde</small>70 €</span>
+          </li>
+          <li class="price reveal">
+            <div><h3>Revisión completa</h3><p>Mantenimiento según plan del fabricante con diagnóstico por escáner.</p></div>
+            <span class="price-tag"><small>desde</small>130 €</span>
+          </li>
+          <li class="price reveal">
+            <div><h3>Cambio de neumático</h3><p>Desmontaje, montaje y equilibrado, por rueda. Neumático aparte.</p></div>
+            <span class="price-tag"><small>desde</small>20 €</span>
+          </li>
+          <li class="price reveal">
+            <div><h3>Cambio de pastillas de freno</h3><p>Por eje, con limpieza de pinza. Pastillas aparte.</p></div>
+            <span class="price-tag"><small>desde</small>30 €</span>
+          </li>
+          <li class="price reveal">
+            <div><h3>Kit de transmisión</h3><p>Cadena, piñón y corona. Mano de obra, kit aparte.</p></div>
+            <span class="price-tag"><small>desde</small>50 €</span>
+          </li>
+          <li class="price reveal">
+            <div><h3>Diagnóstico con escáner</h3><p>Lectura de errores y comprobación del sistema eléctrico.</p></div>
+            <span class="price-tag"><small>desde</small>30 €</span>
+          </li>
+        </ul>
+        <p class="prices-note reveal">Precios orientativos con IVA incluido. El importe final depende del modelo y del estado de la moto: siempre te damos presupuesto antes de empezar.</p>
+      </div>
+    </section>
+
+    <!-- ===== Racing ===== -->
+    <section class="section racing" id="racing">
+      <div class="container racing-grid">
+        <div class="racing-copy reveal">
+          <p class="eyebrow">Del circuito a la calle</p>
+          <h2>Venimos de la pista. Y se nota.</h2>
+          <p>
+            Nuestro origen son las motos de circuito: armado de motores, puesta a punto y reglajes donde cada décima cuenta.
+            Ahora aplicamos esa misma precisión a tu moto del día a día.
+          </p>
+          <ul class="checks">
+            <li>Montaje y armado de motores con tolerancias de competición</li>
+            <li>Puesta a punto pensada en cómo conduces tú</li>
+            <li>Te explicamos qué se ha hecho y por qué</li>
+          </ul>
+        </div>
+        <div class="racing-card reveal" aria-hidden="true">
+          <div class="plate">
+            <span class="plate-num">94</span>
+            <span class="plate-label">Race spec</span>
+          </div>
+          <div class="gauge">
+            <div class="gauge-bar"><span style="--v: .92"></span></div>
+            <div class="gauge-row"><span>Precisión</span><span>92%</span></div>
+            <div class="gauge-bar blue"><span style="--v: .86"></span></div>
+            <div class="gauge-row"><span>Puesta a punto</span><span>86%</span></div>
+            <div class="gauge-bar"><span style="--v: 1"></span></div>
+            <div class="gauge-row"><span>Pasión</span><span>100%</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Proceso ===== -->
+    <section class="section" id="proceso">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Cómo trabajamos</p>
+          <h2>Sencillo, claro y sin sorpresas</h2>
+        </header>
+        <ol class="steps">
+          <li class="step reveal"><span class="step-n">01</span><h3>Nos escribes</h3><p>Cuéntanos qué le pasa a tu moto o qué revisión toca.</p></li>
+          <li class="step reveal"><span class="step-n">02</span><h3>Diagnóstico</h3><p>Revisamos y escaneamos. Te damos presupuesto antes de tocar nada.</p></li>
+          <li class="step reveal"><span class="step-n">03</span><h3>Manos a la obra</h3><p>Reparamos con recambios de calidad y te mantenemos al tanto.</p></li>
+          <li class="step reveal"><span class="step-n">04</span><h3>A rodar</h3><p>Te la entregamos lista y te explicamos todo lo que se ha hecho.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Preguntas frecuentes ===== -->
+    <section class="section" id="faq">
+      <div class="container faq-grid">
+        <header class="section-head reveal">
+          <p class="eyebrow">Preguntas frecuentes</p>
+          <h2>Lo que más nos preguntáis</h2>
+          <p class="faq-lead">¿No encuentras tu duda? Escríbenos por WhatsApp y te respondemos.</p>
+        </header>
+        <!-- EDITAR: revisa que las respuestas se ajustan a cómo trabajáis -->
+        <div class="faq reveal">
+          <details>
+            <summary>¿Hace falta pedir cita?</summary>
+            <div class="faq-body"><p>Recomendamos pedir cita para no hacerte esperar. Para algo rápido, como revisar un ruido o una luz, escríbenos y te decimos cuándo pasar.</p></div>
+          </details>
+          <details>
+            <summary>¿Trabajáis con todas las marcas?</summary>
+            <div class="faq-body"><p>Sí. Trabajamos con scooters, motos de calle, trail, enduro y circuito de cualquier marca.</p></div>
+          </details>
+          <details>
+            <summary>¿Cuánto tarda una revisión?</summary>
+            <div class="faq-body"><p>Un mantenimiento básico suele estar listo en el día. Si hace falta pedir piezas, te avisamos del plazo antes de empezar.</p></div>
+          </details>
+          <details>
+            <summary>¿Me dais presupuesto antes de reparar?</summary>
+            <div class="faq-body"><p>Siempre. Diagnosticamos, te explicamos qué tiene la moto y no tocamos nada sin tu visto bueno.</p></div>
+          </details>
+          <details>
+            <summary>¿Puedo traer yo las piezas o el neumático?</summary>
+            <div class="faq-body"><p>Sí, consúltanos antes. Te cobramos solo la mano de obra, aunque la garantía de la pieza corre a cargo de quien la vende.</p></div>
+          </details>
+          <details>
+            <summary>¿Las reparaciones tienen garantía?</summary>
+            <div class="faq-body"><p>Sí. Todas nuestras reparaciones tienen garantía según la normativa vigente, tanto en mano de obra como en las piezas que suministramos.</p></div>
+          </details>
+          <details>
+            <summary>¿Preparáis motos para circuito?</summary>
+            <div class="faq-body"><p>Es nuestra especialidad: armado de motores, reglajes de suspensión y puesta a punto para tandas y competición.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contacto ===== -->
+    <section class="section contact" id="contacto">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <p class="eyebrow">Contacto</p>
+          <h2>¿Tu moto pide taller?</h2>
+          <p class="contact-lead">Escríbenos y te damos cita. Respondemos rápido.</p>
+          <div class="contact-actions">
+            <a class="btn btn-primary btn-lg" href="#contacto" data-whatsapp target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/></svg>
+              WhatsApp
+            </a>
+            <a class="btn btn-ghost btn-lg" href="https://www.instagram.com/taller_motos_aipar/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+              @taller_motos_aipar
+            </a>
+          </div>
+        </div>
+        <dl class="info reveal">
+          <!-- EDITAR: dirección, teléfono y horario reales -->
+          <div><dt>Dirección</dt><dd>Calle Ejemplo 00, Tu ciudad</dd></div>
+          <div><dt>Teléfono</dt><dd><a href="tel:+34600000000">600 000 000</a></dd></div>
+          <div><dt>Horario</dt><dd>Lun – Vie · 9:00 – 14:00 / 16:00 – 19:30<br>Sáb · 10:00 – 13:30</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span data-year></span> Taller Motos AIPAR</span>
+      <span class="footer-flag" aria-hidden="true">🏍 🛵 🚀</span>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp (el número se configura en script.js) -->
+  <a class="wa-float" href="#contacto" data-whatsapp target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 6.9L3 29l6.5-2c1.9 1 4.1 1.6 6.5 1.6 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.3c-2.1 0-4.1-.6-5.8-1.7l-.4-.3-3.9 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.9-3.8-1.9-6 0-5.9 4.9-10.6 11-10.6s11 4.8 11 10.6-4.9 10.9-10.9 10.9zm6-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1c-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2s0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6s0-.4 0-.6-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.7 1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.3 1.6.2 2.2.1.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+    <span class="wa-label">¿Hablamos?</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
