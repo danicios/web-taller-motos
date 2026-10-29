@@ -47,6 +47,8 @@
     <!-- ===== Hero ===== -->
     <section class="hero" id="inicio">
       <div class="hero-bg" aria-hidden="true">
+        <!-- EDITAR: foto de ejemplo, sustituir por una del taller -->
+        <img class="hero-photo" src="img/hero-taller.webp" alt="" width="1920" height="1280" fetchpriority="high">
         <div class="glow glow-red"></div>
         <div class="glow glow-blue"></div>
         <div class="checker"></div>
@@ -204,19 +206,33 @@
             <li>Te explicamos qué se ha hecho y por qué</li>
           </ul>
         </div>
-        <div class="racing-card reveal" aria-hidden="true">
-          <div class="plate">
+        <figure class="racing-photo photo-reveal">
+          <!-- EDITAR: foto de ejemplo, sustituir por una del equipo en pista -->
+          <img src="img/racing-curva.webp" alt="Pilotos inclinando en una curva del circuito" width="1400" height="875" loading="lazy">
+          <span class="sample-tag">Foto de ejemplo</span>
+          <div class="plate" aria-hidden="true">
             <span class="plate-num">94</span>
             <span class="plate-label">Race spec</span>
           </div>
-          <div class="gauge">
-            <div class="gauge-bar"><span style="--v: .92"></span></div>
-            <div class="gauge-row"><span>Precisión</span><span>92%</span></div>
-            <div class="gauge-bar blue"><span style="--v: .86"></span></div>
-            <div class="gauge-row"><span>Puesta a punto</span><span>86%</span></div>
-            <div class="gauge-bar"><span style="--v: 1"></span></div>
-            <div class="gauge-row"><span>Pasión</span><span>100%</span></div>
-          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== Galería ===== -->
+    <section class="section" id="taller">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">El taller</p>
+          <h2>Manos, herramientas y muchas horas de moto</h2>
+        </header>
+        <!-- EDITAR: fotos de ejemplo, sustituir por fotos reales del taller y de trabajos -->
+        <div class="gallery">
+          <figure class="g-item g-big photo-reveal"><img src="img/galeria-motor.webp" alt="Mecánico montando un motor en el banco de trabajo" width="1000" height="750" loading="lazy"><span class="sample-tag">Foto de ejemplo</span></figure>
+          <figure class="g-item g-tall photo-reveal"><img src="img/galeria-deportiva.webp" alt="Moto deportiva en el taller" width="1000" height="1500" loading="lazy"><span class="sample-tag">Foto de ejemplo</span></figure>
+          <figure class="g-item photo-reveal"><img src="img/galeria-escape.webp" alt="Revisión del escape de una moto" width="1000" height="667" loading="lazy"><span class="sample-tag">Foto de ejemplo</span></figure>
+          <figure class="g-item photo-reveal"><img src="img/galeria-rueda.webp" alt="Cambio de neumático trasero" width="1000" height="1000" loading="lazy"><span class="sample-tag">Foto de ejemplo</span></figure>
+          <figure class="g-item g-wide photo-reveal"><img src="img/galeria-enduro.webp" alt="Mecánico trabajando en una moto de enduro" width="1000" height="667" loading="lazy"><span class="sample-tag">Foto de ejemplo</span></figure>
+          <figure class="g-item g-wide photo-reveal"><img src="img/galeria-herramientas.webp" alt="Caja de herramientas junto a una moto en reparación" width="1000" height="1500" loading="lazy"><span class="sample-tag">Foto de ejemplo</span></figure>
         </div>
       </div>
     </section>

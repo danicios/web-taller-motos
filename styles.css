@@ -188,6 +188,15 @@ body:not(.drawer-open) .drawer-backdrop { transition-duration: 200ms; }
   isolation: isolate;
 }
 .hero-bg { position: absolute; inset: 0; z-index: -1; }
+.hero-photo {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover; object-position: 70% center;
+  opacity: 0.4;
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0.25) 0%, #000 60%);
+  mask-image: linear-gradient(to right, rgba(0,0,0,0.25) 0%, #000 60%);
+  animation: heroPhoto 1600ms var(--ease-out) both;
+}
+@keyframes heroPhoto { from { opacity: 0; transform: scale(1.06); } to { opacity: 0.4; transform: scale(1); } }
 .glow { position: absolute; border-radius: 50%; filter: blur(90px); opacity: 0.55; }
 .glow-red { width: 520px; height: 520px; background: var(--red); left: -160px; top: 10%; opacity: 0.35; }
 .glow-blue { width: 560px; height: 560px; background: var(--blue); right: -200px; bottom: -10%; opacity: 0.3; }
@@ -401,39 +410,65 @@ body:not(.drawer-open) .drawer-backdrop { transition-duration: 200ms; }
   background: var(--blue-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232f7bff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L19 7'/%3E%3C/svg%3E") center / 14px no-repeat;
 }
 
-.racing-card {
-  position: relative;
-  padding: 28px;
-  border-radius: 24px;
-  border: 1px solid var(--border);
-  background:
-    radial-gradient(120% 80% at 100% 0%, rgba(47, 123, 255, 0.22), transparent 60%),
-    radial-gradient(100% 80% at 0% 100%, rgba(255, 42, 61, 0.22), transparent 60%),
-    var(--bg);
-  overflow: hidden;
-}
+.racing-photo { aspect-ratio: 4 / 3; }
 .plate {
+  position: absolute; left: 20px; bottom: 20px; z-index: 2;
   display: inline-flex; flex-direction: column; align-items: center;
-  padding: 10px 28px 12px;
+  padding: 8px 22px 10px;
   background: #f2f3f7; color: #0a0a0a;
-  border-radius: 14px;
+  border-radius: 12px;
   transform: rotate(-4deg);
-  box-shadow: 0 16px 40px -12px rgba(0,0,0,0.6);
+  box-shadow: 0 16px 40px -12px rgba(0,0,0,0.7);
 }
-.plate-num { font-family: var(--font-display); font-weight: 800; font-style: italic; font-size: 5rem; line-height: 0.9; }
-.plate-label { font-family: var(--font-display); font-size: 0.8rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--red); font-weight: 600; }
-.gauge { margin-top: 32px; display: grid; gap: 6px; }
-.gauge-row { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--muted); margin-bottom: 10px; }
-.gauge-bar { height: 6px; border-radius: 6px; background: rgba(255,255,255,0.08); overflow: hidden; }
-.gauge-bar span {
-  display: block; height: 100%; border-radius: inherit;
-  background: linear-gradient(90deg, #b3121f, var(--red));
-  transform-origin: left;
-  transform: scaleX(0);
-  transition: transform 1200ms var(--ease-in-out) 200ms;
+.plate-num { font-family: var(--font-display); font-weight: 800; font-style: italic; font-size: 3.5rem; line-height: 0.9; }
+.plate-label { font-family: var(--font-display); font-size: 0.7rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--red); font-weight: 600; }
+
+/* ===== Fotos ===== */
+.photo-reveal {
+  position: relative;
+  margin: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  /* Revelado de abajo arriba al entrar en pantalla */
+  clip-path: inset(100% 0 0 0 round var(--radius));
+  transition: clip-path 900ms var(--ease-in-out) var(--delay, 0ms);
 }
-.gauge-bar.blue span { background: linear-gradient(90deg, #1546a8, var(--blue)); }
-.racing-card.is-visible .gauge-bar span { transform: scaleX(var(--v)); }
+.photo-reveal.is-visible { clip-path: inset(0 0 0 0 round var(--radius)); }
+.photo-reveal img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transform: scale(1.08);
+  transition: transform 1200ms var(--ease-out) var(--delay, 0ms);
+}
+.photo-reveal.is-visible img { transform: scale(1); }
+.no-js .photo-reveal { clip-path: none; }
+.no-js .photo-reveal img { transform: none; }
+
+/* Etiqueta para que el cliente sepa qué fotos hay que sustituir */
+.sample-tag {
+  position: absolute; top: 12px; right: 12px; z-index: 2;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(7, 8, 12, 0.72);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em; color: #d6d9e3;
+  pointer-events: none;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: clamp(160px, 18vw, 230px);
+  gap: 12px;
+}
+.g-big { grid-column: span 2; grid-row: span 2; }
+.g-tall { grid-row: span 2; }
+.g-wide { grid-column: span 2; }
+@media (max-width: 760px) {
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 150px; gap: 8px; }
+}
 
 @media (max-width: 860px) { .racing-grid { grid-template-columns: 1fr; } }
 
@@ -483,7 +518,11 @@ body:not(.drawer-open) .drawer-backdrop { transition-duration: 200ms; }
   html { scroll-behavior: auto; }
   .hero-item { animation: fadeOnly 300ms ease both; animation-delay: 0ms !important; }
   .reveal { transform: none; transition: opacity 300ms ease; transition-delay: 0ms; }
-  .gauge-bar span, .step::before { transition: none; }
+  .step::before { transition: none; }
+  .photo-reveal { clip-path: none; transition: opacity 300ms ease; opacity: 0; }
+  .photo-reveal.is-visible { clip-path: none; opacity: 1; }
+  .photo-reveal img { transform: none; transition: none; }
+  .hero-photo { animation: none; }
   .drawer { transition: none; }
   .faq details[open] .faq-body { animation: fadeOnly 200ms ease; }
 }

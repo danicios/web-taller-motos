@@ -46,8 +46,9 @@ drawer.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeDra
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeDrawer(); });
 
 // Revelado al entrar en pantalla (una sola vez), con escalonado corto por grupo
+const revealables = document.querySelectorAll(".reveal, .photo-reveal");
 const groups = new Map();
-document.querySelectorAll(".reveal").forEach((el) => {
+revealables.forEach((el) => {
   const parent = el.parentElement;
   const i = groups.get(parent) ?? 0;
   el.style.setProperty("--delay", `${i * 60}ms`);
@@ -62,4 +63,4 @@ const io = new IntersectionObserver((entries) => {
     }
   });
 }, { rootMargin: "0px 0px -80px 0px" });
-document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+revealables.forEach((el) => io.observe(el));
